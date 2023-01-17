@@ -1,4 +1,4 @@
-import products from "../../../productsdata"
+// import products from "../../../productsdata"
 export const getProducts = ()=> async(dispatch)=>{
     const url = "https://amazon-mern-backend.onrender.com"
     try {
