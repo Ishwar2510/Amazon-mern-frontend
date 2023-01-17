@@ -11,6 +11,7 @@ const Cart = () => {
 
     const { account, setAccount } = useContext(Logincontext);
     console.log(account);
+    const url = "https://amazon-mern-backend.onrender.com"
 
     
 
@@ -24,7 +25,7 @@ const Cart = () => {
     // console.log([inddata]);
 
     const getinddata = async () => {
-        const res = await fetch(`/getproductsone/${id}`, {
+        const res = await fetch(url+`/getproductsone/${id}`, {
             method: "GET",
             headers: {
                 Accept: "application/json",
@@ -50,7 +51,7 @@ const Cart = () => {
 
     const addtocart = async (id) => {
         console.log(id);
-        const check = await fetch(`/addcart/${id}`, {
+        const check = await fetch(url+`/addcart/${id}`, {
             method: "POST",
             headers: {
                 Accept: "application/json",

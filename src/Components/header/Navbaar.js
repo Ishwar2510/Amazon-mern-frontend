@@ -36,6 +36,7 @@ const Navbaar = () => {
     // const classes = usestyle();
 
     // const history = useHistory("");
+    const url = "https://amazon-mern-backend.onrender.com"
 
     const [text, setText] = useState();
     // only for search
@@ -91,7 +92,7 @@ const Navbaar = () => {
     // for logout
     const logoutuser = async () => {
         console.log("logout clicked")
-        const res2 = await fetch("/logout", {
+        const res2 = await fetch(url+"/logout", {
             method: "GET",
             headers: {
                 Accept: "application/json",

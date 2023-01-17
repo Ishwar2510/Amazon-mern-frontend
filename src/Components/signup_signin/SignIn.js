@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const SignIn = () => {
+    const url = "https://amazon-mern-backend.onrender.com"
 
     const { setAccount } = useContext(Logincontext);
     const navigate = useNavigate();
@@ -37,7 +38,7 @@ const SignIn = () => {
         const { email, password } = logdata;
         // console.log(email);
         try {
-            const res = await fetch("/login", {
+            const res = await fetch(url+"/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

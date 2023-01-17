@@ -1,9 +1,9 @@
 import products from "../../../productsdata"
 export const getProducts = ()=> async(dispatch)=>{
-   
+    const url = "https://amazon-mern-backend.onrender.com"
     try {
         // console.log("fetching datas")
-        const data = await fetch("/getproducts",{
+        const data = await fetch(url+"/getproducts",{
                 method:"GET",
                 headers:{
                     "Content-Type":"application/json"

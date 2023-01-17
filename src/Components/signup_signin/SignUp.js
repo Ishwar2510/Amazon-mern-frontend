@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Signup = () => {
-
+    const url = "https://amazon-mern-backend.onrender.com"
     const [udata, setUdata] = useState({
         fname: "",
         email: "",
@@ -36,7 +36,7 @@ const Signup = () => {
 
         const { fname, email, mobile, password, cpassword } = udata;
         try {
-            const res = await fetch("/register", {
+            const res = await fetch(url+"/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

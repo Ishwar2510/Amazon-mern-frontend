@@ -6,13 +6,14 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Option = ({ deletedata, get }) => {
     // console.log(deletedata);
+    const url = "https://amazon-mern-backend.onrender.com"
 
     const { account, setAccount } = useContext(Logincontext);
     console.log(account);
 
     const removedata = async (id) => {
         try {
-            const res = await fetch(`remove/${id}`, {
+            const res = await fetch(url+`remove/${id}`, {
                 method: "GET",
                 headers: {
                     Accept: "application/json",

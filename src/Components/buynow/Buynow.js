@@ -7,12 +7,13 @@ import Right from './Right';
 import Subtotal from './Subtotal';
 
 const Buynow = () => {
+    const url = "https://amazon-mern-backend.onrender.com"
 
     const [cartdata, setCartdata] = useState("");
     // console.log(cartdata.length);
 
     const getdatabuy = async () => {
-        const res = await fetch("/cartdetails", {
+        const res = await fetch(url+"/cartdetails", {
             method: "GET",
             headers: {
                 Accept:"application/json",
@@ -105,6 +106,3 @@ const Buynow = () => {
 export default Buynow;
 
 
-// thodu changes krya 6 carts ni andr cart htu bt tene remove karine 
-// je pramane aapdo normal data save 6 te rite bnavyu
-// jo carts ni andr cart use kro to tmare map call kravya pachi pn e.cart.discount
