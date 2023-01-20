@@ -72,7 +72,7 @@ const Signup = () => {
         toast.success("Registration Successfully done !", {
           position: "top-center",
         });
-        navigate("/signin");
+        navigate("/login");
       }
     } catch (error) {
       toast.error("frontend error", {

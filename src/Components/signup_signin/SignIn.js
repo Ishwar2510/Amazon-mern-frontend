@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Logincontext } from '../context/Contextprovider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import Amazon_logo from '../../Images/Amazon_logo.png'
+
 import { useNavigate } from "react-router-dom";
 
 
