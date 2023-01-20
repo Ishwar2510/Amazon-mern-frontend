@@ -16,14 +16,3 @@ root.render(
     </Provider>
   </Contextprovider>
 );
-// ReactDOM.render(
-//   <Contextprovider>
-//     <Provider store={store}>
-//       <BrowserRouter>
-//         <App />
-//       </BrowserRouter>
-//     </Provider>
-//   </Contextprovider>
-//   ,
-//   document.getElementById('root')
-// );
