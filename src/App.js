@@ -39,7 +39,7 @@ function App() {
               <Route exact path="/login" element={<SignIn />}/>
                 
               
-              <Route exact path="/getproductsone/:id" element={<Cart />}/>
+              <Route exact path="/getproductsone/products/:id" element={<Cart />}/>
                 
               
               <Route exact path="/buynow" element={<Buynow />}/>
