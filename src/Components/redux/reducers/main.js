@@ -1,9 +1,9 @@
-import { getProductsReducers } from "./Productreducers";
+// import { getProductsReducers } from "./Productreducers";
 
-import {combineReducers} from "redux";
+// import {combineReducers} from "redux";
 
-const rootreducers = combineReducers({
-    getproductsdata : getProductsReducers
-});
+// const rootreducers = combineReducers({
+//     getproductsdata : getProductsReducers
+// });
 
-export default rootreducers;
+// export default rootreducers;

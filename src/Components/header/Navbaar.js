@@ -13,7 +13,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Drawer, IconButton, List, ListItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Rightheader from './Rightheader';
-import { getProducts } from '../redux/actions/action';
+
+import {getProducts} from '../../redux/actions/action'
 import { useSelector, useDispatch } from "react-redux";
 import Amazon_logo from '../../Images/Amazon_logo.png'
 

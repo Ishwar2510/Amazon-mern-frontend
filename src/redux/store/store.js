@@ -1,4 +1,4 @@
-import {getProductsReducers} from './Components/redux/reducers/Productreducers'
+import {getProductsReducers} from '../reducers/Productreducers'
 import {configureStore} from '@reduxjs/toolkit'
 const store = configureStore({
     reducer:{
