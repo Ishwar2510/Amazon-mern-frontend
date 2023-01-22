@@ -33,7 +33,7 @@ const Signup = () => {
       toast.error("please Enter all details");
       return;
     }
-    if (mobile.toString().length != 10) {
+    if (mobile.toString().length !== 10) {
       toast.error("please enter valid mobile number");
       return;
     }
