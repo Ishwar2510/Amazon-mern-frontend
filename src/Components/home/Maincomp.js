@@ -3,7 +3,8 @@ import Banner from './Banner'
 import "../home/home.css";
 import Slide from './Slide';
 import { Divider } from '@mui/material';
-import { getProducts } from '../redux/actions/action';
+
+import { getProducts } from '../../redux/actions/action';
 import { useSelector, useDispatch } from "react-redux";
 
 

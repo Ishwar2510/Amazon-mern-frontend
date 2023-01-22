@@ -10,36 +10,24 @@ import { Logincontext } from '../context/Contextprovider';
 import { ToastContainer, toast } from 'react-toastify';
 import LogoutIcon from '@mui/icons-material/Logout';
 import 'react-toastify/dist/ReactToastify.css';
-// import { useHistory } from 'react-router';
-// import { makeStyles } from '@material-ui/core';
 import { Drawer, IconButton, List, ListItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Rightheader from './Rightheader';
-import { getProducts } from '../redux/actions/action';
+
+import {getProducts} from '../../redux/actions/action'
 import { useSelector, useDispatch } from "react-redux";
 import Amazon_logo from '../../Images/Amazon_logo.png'
 
 
-// const usestyle = makeStyles({
-//     component: {
-//         marginTop: 10,
-//         marginRight: "-50px",
-//         width: "300px",
-//         padding: 50,
-//         height: "300px"
-//     },
-// })
 
 
 const Navbaar = () => {
 
-    // const classes = usestyle();
 
-    // const history = useHistory("");
     const url = "https://amazon-mern-backend.onrender.com"
 
-    const [text, setText] = useState();
-    // only for search
+    const [text, setText] = useState("");
+    
     const { products } = useSelector(state => state.getproductsdata);
 
     const dispatch = useDispatch();
