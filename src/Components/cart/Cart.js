@@ -47,7 +47,7 @@ const Cart = () => {
 
     useEffect(() => {
         setTimeout(getinddata, 1000)
-    });
+    },[]);
 
     const addtocart = async (id) => {
         console.log(id);
