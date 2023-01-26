@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
-  const url = "https://amazon-mern-backend.onrender.com";
+  const url = "https://e-commerce-backend-t4z5.onrender.com";
   const [udata, setUdata] = useState({
     fname: "",
     email: "",

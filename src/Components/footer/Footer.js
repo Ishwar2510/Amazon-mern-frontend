@@ -2,12 +2,8 @@ import React from 'react'
 import "../footer/footr.css";
 import Amazon_logo from '../../Images/Amazon_logo.png'
 
-
 const Footer = () => {
-
     const year = new Date().getFullYear();
-    console.log(year);
-
     return (
         <footer>
             <div className="footer_container">

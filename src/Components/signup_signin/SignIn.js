@@ -3,11 +3,10 @@ import { NavLink } from "react-router-dom";
 import { Logincontext } from "../context/Contextprovider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
-  const url = "https://amazon-mern-backend.onrender.com";
+  const url = "https://e-commerce-backend-t4z5.onrender.com";
   const { setAccount } = useContext(Logincontext);
   const navigate = useNavigate();
   const [logdata, setData] = useState({
@@ -54,6 +53,7 @@ const SignIn = () => {
         toast.success("Login Successfully done !", {
           position: "top-center",
         });
+        localStorage.setItem("ecommuserdata", data.email);
         navigate("/");
       }
     } catch (error) {

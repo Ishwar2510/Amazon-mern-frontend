@@ -4,11 +4,13 @@ import { Divider } from "@mui/material";
 import { useParams } from "react-router";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Logincontext } from "../context/Contextprovider";
+import {useNavigate} from 'react-router-dom'
 
 const Cart = () => {
-  const {  setAccount } = useContext(Logincontext);
-  
-  const url = "https://amazon-mern-backend.onrender.com";
+  const {  account, setAccount } = useContext(Logincontext);
+  const navigate = useNavigate()
+ 
+  const url = "https://e-commerce-backend-t4z5.onrender.com"
   const { id } = useParams("");
   const [inddata, setIndedata] = useState("");
   const getinddata = async () => {
@@ -18,7 +20,7 @@ const Cart = () => {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      credentials: "include",
+    
     });
 
     const data = await res.json();
@@ -32,11 +34,13 @@ const Cart = () => {
 
   useEffect(() => {
     setTimeout(getinddata, 1000);
-  });
+  },[]);
 
   const addtocart = async (id) => {
-    console.log(id);
-    const check = await fetch(url + `/addcart/${id}`, {
+    if(!account.email){
+      navigate("/login")
+    }
+    const check = await fetch(url + `/addcart/${account.email}/${id}`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -45,7 +49,7 @@ const Cart = () => {
       body: JSON.stringify({
         inddata,
       }),
-      credentials: "include",
+      
     });
 
     const data1 = await check.json();
@@ -70,7 +74,7 @@ const Cart = () => {
               >
                 Add to Cart
               </button>
-              <button className="cart_btn2">Buy Now</button>
+              <button disabled className="cart_btn2">Buy Now disabled </button>
             </div>
           </div>
           <div className="right_cart">
@@ -101,7 +105,7 @@ const Cart = () => {
               <h4>
                 FREE Delivery :{" "}
                 <span style={{ color: "#111", fontWeight: "600" }}>
-                  Oct 8 - 21
+                  {`${new Date().getDate()+1} - ${(new Date().getDate()+10)%30}`}
                 </span>{" "}
                 Details
               </h4>
@@ -109,7 +113,7 @@ const Cart = () => {
                 Fastest delivery:{" "}
                 <span style={{ color: "#111", fontWeight: "600" }}>
                   {" "}
-                  Tomorrow 11AM
+                  Tomorrow 5 PM
                 </span>
               </p>
             </div>
