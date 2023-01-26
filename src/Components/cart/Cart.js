@@ -34,7 +34,7 @@ const Cart = () => {
 
   useEffect(() => {
     setTimeout(getinddata, 1000);
-  },[]);
+  });
 
   const addtocart = async (id) => {
     if(!account.email){
